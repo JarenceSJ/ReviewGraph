@@ -146,7 +146,7 @@ class GCMCLayer(nn.Module, ABC):
         self.ifc = nn.Linear(msg_units, out_units)
         self.dropout = nn.Dropout(dropout_rate)
         sub_conv = {}
-        self.aggregate = 'stack'  # stack or sum
+        self.aggregate = 'sum'  # stack or sum
         for rating in rating_vals:
 
             rating = to_etype_name(rating)
