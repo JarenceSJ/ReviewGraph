@@ -1,4 +1,5 @@
 # Review Graph
+## This code is under tidying up ... 
 
 ## requirements
 
@@ -22,14 +23,14 @@ ReviewGraph
 ├── BERT
 │ └── bert_whitening.py   # bert-whitening 
 ├── README.md
-├── RGCL   				  # models
+├── RGCL   				        # models
 │ ├── data.py             # load data by dgl
-│ ├── rgc.py			  # review graph learning 
-│ ├── rgc_ed.py			  # review graph learning with edge discrimination
+│ ├── rgc.py			        # review graph learning 
+│ ├── rgc_ed.py			      # review graph learning with edge discrimination
 │ ├── rgc_nd.py           # review graph learning with node discrimination
 │ └── rgc_nd_ed.py        # RGCL
 ├── load_data.py		  
-├── nlp_util.py			  # clean text
+├── nlp_util.py			      # clean text
 ├── util.py				
 └── word2vector.py        # loading Glove pretraining word vectors.
 ```
