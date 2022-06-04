@@ -19,7 +19,7 @@ pytorch == 1.10.2
 
 ### A processed data: Digital_Music
 Dowload from [here](https://drive.google.com/drive/folders/1OPkb_XLlxDp4otLy5-WKX4j_RvxODPuj?usp=sharing).
-Then the config dataset_path parameter in rgc.py and the review_feat_path parameter in data.py.
+Then config dataset_path parameter in rgc.py and the review_feat_path parameter in data.py.
 
 ## Files
 ```
