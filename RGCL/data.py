@@ -117,9 +117,6 @@ class MovieLens(object):
         review_feat_path = \
             f'../checkpoint/{dataset_name}/BERT-Whitening/bert-base-uncased_sentence_vectors_dim_{review_fea_size}.pkl'
 
-        soft_label_path = \
-            f'../checkpoint/{dataset_name}/TextCNN-Rating/train_review_soft_label.pkl'
-
         try:
             self.train_review_feat = torch.load(review_feat_path)
         except FileNotFoundError:
