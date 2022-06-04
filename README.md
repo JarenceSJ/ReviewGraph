@@ -4,8 +4,8 @@
 ## requirements
 
 ```
-python=3.8.3
-transformers=3.1.0
+python == 3.8.3
+transformers == 3.1.0
 dgl == 0.7.2
 pytorch == 1.10.2
 ```
