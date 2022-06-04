@@ -32,62 +32,6 @@ from util import *
 
 
 class MovieLens(object):
-    """MovieLens dataset used by GCMC model
-
-    The dataset stores MovieLens ratings in two types of graphs. The encoder graph
-    contains rating value information in the form of edge types. The decoder graph
-    stores plain user-movie pairs in the form of a bipartite graph with no rating
-    information. All graphs have two types of nodes: "user" and "movie".
-
-    The training, validation and test set can be summarized as follows:
-
-    training_enc_graph : training user-movie pairs + rating info
-    training_dec_graph : training user-movie pairs
-    valid_enc_graph : training user-movie pairs + rating info
-    valid_dec_graph : validation user-movie pairs
-    test_enc_graph : training user-movie pairs + validation user-movie pairs + rating info
-    test_dec_graph : test user-movie pairs
-
-    Attributes
-    ----------
-    train_enc_graph : dgl.DGLHeteroGraph
-        Encoder graph for training.
-    train_dec_graph : dgl.DGLHeteroGraph
-        Decoder graph for training.
-    train_labels : torch.Tensor
-        The categorical label of each user-movie pair
-    train_truths : torch.Tensor
-        The actual rating values of each user-movie pair
-    valid_enc_graph : dgl.DGLHeteroGraph
-        Encoder graph for validation.
-    valid_dec_graph : dgl.DGLHeteroGraph
-        Decoder graph for validation.
-    valid_labels : torch.Tensor
-        The categorical label of each user-movie pair
-    valid_truths : torch.Tensor
-        The actual rating values of each user-movie pair
-    test_enc_graph : dgl.DGLHeteroGraph
-        Encoder graph for test.
-    test_dec_graph : dgl.DGLHeteroGraph
-        Decoder graph for test.
-    test_labels : torch.Tensor
-        The categorical label of each user-movie pair
-    test_truths : torch.Tensor
-        The actual rating values of each user-movie pair
-    user_feature : torch.Tensor
-        User feature tensor. If None, representing an identity matrix.
-    movie_feature : torch.Tensor
-        Movie feature tensor. If None, representing an identity matrix.
-    possible_rating_values : np.ndarray
-        Available rating values in the dataset
-
-    Parameters
-    ----------
-    dataset_path : str
-        Dataset name. Could be "ml-100k", "ml-1m", "ml-10m"
-    device : torch.device
-        Device context
-    """
 
     def __init__(self, dataset_name, dataset_path, device, review_fea_size,
                  symm=True, mix_cpu_gpu=True, use_user_item_doc=False):
@@ -95,25 +39,6 @@ class MovieLens(object):
         self._review_fea_size = review_fea_size
         self._symm = symm
 
-        # TextCNN
-        # review_feat_path = \
-        #     f'../checkpoint/{dataset_name}/TextCNN-Rating/train_review_feature_dim_{review_fea_size}.pkl'
-
-        # DeepCoNN_add_Duv
-        # review_feat_path = \
-        #     f'../checkpoint/{dataset_name}/DeepCoNN_add_Duv/review_feature_dim_{review_fea_size}.pkl'
-
-        # GCMC_add_Duv
-        # review_feat_path = \
-        #     f'../checkpoint/{dataset_name}/GCMC-Add-Duv/GCMC-Add-Duv_dim_{review_fea_size}_feat.pkl'
-
-        # BERT-Whitening
-        # if review_fea_size == 256:
-        #     review_feat_path = \
-        #         f'../checkpoint/{dataset_name}/BERT-Whitening/bert-base-uncased_sentence_vectors.pkl'
-        # else:
-        #     review_feat_path = \
-        #         f'../checkpoint/{dataset_name}/BERT-Whitening/bert-base-uncased_sentence_vectors_dim_{review_fea_size}.pkl'
         review_feat_path = \
             f'../checkpoint/{dataset_name}/BERT-Whitening/bert-base-uncased_sentence_vectors_dim_{review_fea_size}.pkl'
 
