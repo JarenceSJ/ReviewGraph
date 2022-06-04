@@ -1,7 +1,7 @@
 # Review Graph
 ## This code is under tidying up ... 
 
-## requirements
+## Requirements
 
 ```
 python == 3.8.3
@@ -17,6 +17,9 @@ pytorch == 1.10.2
 3. Run BERT/bert_whitening.py for obtaining the feature vector for each review.
 4. If previous steps successfully run, then you can run rgc_nd_ed.py. 
 
+### A processed data: Digital_Music
+Dowload from [here](https://drive.google.com/drive/folders/1OPkb_XLlxDp4otLy5-WKX4j_RvxODPuj?usp=sharing).
+Then the config dataset_path parameter in rgc.py and the review_feat_path parameter in data.py.
 
 ## Files
 ```
