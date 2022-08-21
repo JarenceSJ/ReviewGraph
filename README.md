@@ -1,5 +1,4 @@
 # Review Graph
-## This code is under tidying up ... 
 
 ## Requirements
 
