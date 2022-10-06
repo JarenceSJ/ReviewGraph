@@ -1,5 +1,7 @@
 # Review Graph
 
+This repo is an official implementation of [A Review-aware Graph Contrastive Learning Framework for Recommendation](https://dl.acm.org/doi/abs/10.1145/3477495.3531927).
+
 ## Requirements
 
 ```
